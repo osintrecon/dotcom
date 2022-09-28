@@ -1,11 +1,57 @@
 <!DOCTYPE html>
-<html>
-<head>
+<html lang="en">
+  <head>
+    <title>OSINTRECON</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        background: #ffffff;
+        font-family: "Lucida Console", "Courier New", monospace;
+      }
 
-</head>
-<body>
+      section {
+        text-align: center;
+        padding: 1em;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+      }
 
-  <h1>OSINT Recon</h1>
-  
-</body>
+      .op50 {
+        opacity: 0.5;
+      }
+
+      .rh {
+        -webkit-transform: rotate(-180deg);
+        -moz-transform: rotate(-180deg);
+        -o-transform: rotate(-180deg);
+        transform: rotate(-180deg);
+        display: inline-block;
+        padding-top: 0.12em;
+      }
+
+      .blink {
+        animation: blinker 1.2s linear infinite;
+      }
+
+      @keyframes blinker {
+        50% {
+          opacity: 0;
+        }
+      }
+
+      h1 {
+        font-size: 1.8em;
+        margin: 0;
+        line-height: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <h1><span class="op50">OSINT</span>RECON<span class="blink">_</span></h1>
+    </section>
+  </body>
 </html>
