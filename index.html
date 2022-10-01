@@ -24,20 +24,22 @@
         opacity: 0.5;
       }
 
-
       .branding {
         font-weight: bold;
         font-size: 32px;
         line-height: 32px;
         letter-spacing: 0.25ch;
+        border-right: 19px solid;
       }
 
       .typing {
-        width: 13.75ch;
-        animation: typing 2.5s steps(11), blink .5s step-end 20 alternate;
+        width: 13.60ch;
+        animation: typing 3.5s steps(11), blink .5s step-end 20 alternate;
         white-space: nowrap;
         overflow: hidden;
-        border-right: 18px solid;
+        line-height: 26px;
+        height: 25px;
+        padding-top: 3px;
       }
 
       @keyframes typing {
@@ -51,19 +53,11 @@
           border-color: transparent;
         }
       }
-
-      h1 {
-        font-size: 1.8em;
-        margin: 0;
-        line-height: 0;
-      }
     </style>
   </head>
   <body>
     <div id="wrapper">
-      <div class="branding typing">
-      <span class="op50">OSINT</span>RECON
-    </div>
+      <div class="branding typing"><span class="op50">OSINT</span>RECON_</div>
     </div>
   </body>
 </html>
