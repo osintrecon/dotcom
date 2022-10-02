@@ -26,38 +26,97 @@
 
       .branding {
         font-weight: bold;
-        font-size: 32px;
-        line-height: 32px;
+        font-size: 28px;
         letter-spacing: 0.25ch;
-        border-right: 19px solid;
+        overflow: hidden;
+        white-space: nowrap;
+        visibility: hidden;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
       }
 
-      .typing {
-        width: 13.60ch;
-        animation: typing 3.5s steps(11), blink .5s step-end 20 alternate;
-        white-space: nowrap;
-        overflow: hidden;
-        line-height: 26px;
-        height: 25px;
-        padding-top: 3px;
+      h1.branding {
+        animation-name: typing, typing;
+        animation-delay: 0s, 2s;
+        animation-duration: 2.0s, 2.0s;
+        animation-timing-function: steps(30, end), steps(30, start);
+        animation-iteration-count: 1, 1;
+        animation-fill-mode: forwards, forwards;
+        animation-direction: normal, reverse;
+      }
+
+      h1.branding:nth-child(2) {
+        visibility: hidden;
+        animation-name: typing, typing;
+        animation-delay: 3s, 5s;
+        animation-duration: 2.0s, 2.0s;
+        animation-timing-function: steps(30, end), steps(30, start);
+        animation-iteration-count: 1, 1;
+        animation-fill-mode: forwards, forwards;
+        animation-direction: normal, reverse;
+      }
+
+      h1.branding:nth-child(3) {
+        visibility: hidden;
+        animation-name: typing, typing;
+        animation-delay: 6s, 9s;
+        animation-duration: 2.0s, 2.0s;
+        animation-timing-function: steps(30, end), steps(30, start);
+        animation-iteration-count: 1, 1;
+        animation-fill-mode: forwards, forwards;
+        animation-direction: normal, reverse;
+      }
+
+      h1.branding:nth-child(4) {
+        visibility: hidden;
+        animation-name: typing;
+        animation-delay: 9s;
+        animation-duration: 2.0s;
+        animation-timing-function: steps(30, end);
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        animation-direction: normal;
       }
 
       @keyframes typing {
         from {
           width: 0;
         }
-      }
-          
-      @keyframes blink {
-        50% {
-          border-color: transparent;
+        0%,2% {
+          visibility: hidden;
+        }
+        3%, 100% {
+          visibility: visible;
+        }
+        100% {
+          width: 14em;
         }
       }
+
+      @keyframes hideElement {
+        to {
+            visibility: hidden;
+            width: 0;
+            height: 0;
+        }
+      }
+
+      @keyframes showElement {
+        to {
+            visibility: visible;
+        }
+      }
+
     </style>
   </head>
   <body>
     <div id="wrapper">
-      <div class="branding typing"><span class="op50">OSINT</span>RECON_</div>
+      <h1 class="branding">OPEN-SOURCE</h1>
+      <h1 class="branding">INT<span class="op50">ELLIGENCE</span></h1>
+      <h1 class="branding">RECON<span class="op50">NAISSANCE</span></h1>
+      <h1 class="branding"><span class="op50">OSINT</span>RECON</h1>
     </div>
   </body>
 </html>
